@@ -8,23 +8,23 @@ This package will be incorporated into VocPrez 3 but may also be used elsewhere,
 ## Search Status
 
 - **VocPrez**
-  - searching across multiple VocPrezes works fine
-    - not GSQ: seems to be an auth issue in Python, not present using cURL
+    - searching across multiple VocPrezes works fine
+        - not GSQ: seems to be an auth issue in Python, not present using cURL
 - **RVA**
-  - search results obtained but not meshed in, see TODO on test_rva
+    - search results obtained but not meshed in, see TODO on test_rva
 - **SOP**
-  - likely SPARQL search will work easily, but what public instances? Perhaps BDR when up
+    - likely SPARQL search will work easily, but what public instances? Perhaps BDR when up
 - **NVS**
-  - not started
+    - not started
 - **CSIRO Registry**
-  - not started
+    - not started
 
 Broader systems:
 
 - **BARTOC**
-  - not started
+    - not started
 - **AGROVOC**
-  - not started
+    - not started
 
 ## Version
 
