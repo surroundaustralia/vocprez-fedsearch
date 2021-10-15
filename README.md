@@ -7,10 +7,22 @@ This package will be incorporated into VocPrez 3 but may also be used elsewhere,
 
 ## Search Status
 
-- searching across multiple VocPrezes
-  - not GSQ: seems to be an auth issue in Python, not present using cURL
-- RVA search results obtained but not meshed in, see TODO on test_rva
-- NVS search not started
+- **VocPrez**
+  - searching across multiple VocPrezes works fine
+    - not GSQ: seems to be an auth issue in Python, not present using cURL
+- **RVA**
+  - search results obtained but not meshed in, see TODO on test_rva
+- **NVS**
+  - not started
+- **CSIRO Registry**
+  - not started
+
+Broader systems:
+
+- **BARTOC**
+  - not started
+- **AGROVOC**
+  - not started
 
 ## Version
 
