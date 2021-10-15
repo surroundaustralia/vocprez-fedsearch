@@ -12,6 +12,8 @@ This package will be incorporated into VocPrez 3 but may also be used elsewhere,
     - not GSQ: seems to be an auth issue in Python, not present using cURL
 - **RVA**
   - search results obtained but not meshed in, see TODO on test_rva
+- **SOP**
+  - likely SPARQL search will work easily, but what public instances? Perhaps BDR when up
 - **NVS**
   - not started
 - **CSIRO Registry**
