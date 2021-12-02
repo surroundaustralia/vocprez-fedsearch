@@ -5,7 +5,7 @@ description = ""
 authors = ["Nicholas Car <nicholas.car@surroundaustralia.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 prettytable = "^2.2.1"
 httpx = "^0.20.0"
 
