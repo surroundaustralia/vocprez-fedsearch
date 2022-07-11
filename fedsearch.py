@@ -151,27 +151,27 @@ class SkosSearch(object):
         q = """
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     
-            SELECT DISTINCT ?sys ?g ?uri ?pl (SUM(?w) AS ?weight)
+            SELECT DISTINCT ?sys ?cs ?uri ?pl (SUM(?w) AS ?weight)
             WHERE {
-                GRAPH ?g {
-                    {  # exact match on a prefLabel always wins
-                        ?uri a skos:Concept ;
-                             skos:prefLabel ?pl .
-                        BIND (50 AS ?w)
-                        FILTER REGEX(?pl, "^{term}$", "i")
-                    }
-                    UNION    
-                    {
-                        ?uri a skos:Concept ;
-                             skos:prefLabel ?pl .
-                        BIND (10 AS ?w)
-                        FILTER REGEX(?pl, "{term}", "i")
-                    }
+                {  # exact match on a prefLabel always wins
+                    ?uri a skos:Concept ;
+                        skos:prefLabel ?pl ;
+                        skos:inScheme|skos:topConceptOf|^skos:hasTopConcept ?cs .
+                    BIND (50 AS ?w)
+                    FILTER REGEX(?pl, "^{term}$", "i")
+                }
+                UNION    
+                {
+                    ?uri a skos:Concept ;
+                        skos:prefLabel ?pl ;
+                        skos:inScheme|skos:topConceptOf|^skos:hasTopConcept ?cs .
+                    BIND (10 AS ?w)
+                    FILTER REGEX(?pl, "{term}", "i")
                 }
     
                 BIND (<{sys}> AS ?sys)
             }
-            GROUP BY ?g ?uri ?pl ?sys
+            GROUP BY ?cs ?uri ?pl ?sys
             """.replace(
             "{sys}", sparql_endpoint
         ).replace(
